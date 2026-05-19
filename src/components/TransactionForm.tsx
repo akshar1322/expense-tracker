@@ -108,7 +108,7 @@ export default function TransactionForm() {
           />
         </label>
         <label>
-          <span className="text-sm font-medium text-slate-700">Amount in ₹</span>
+          <span className="text-sm font-medium text-slate-700">Amount in INR</span>
           <input
             required
             min="1"
