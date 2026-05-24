@@ -3,8 +3,9 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
-  url      = env("DATABASE_URL")
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
 }
 
 model Account {
@@ -22,6 +23,6 @@ model Transaction {
   category  String
   date      DateTime
   accountId Int
-  account   Account  @relation(fields: [accountId], references: [id])
   createdAt DateTime @default(now())
+  account   Account  @relation(fields: [accountId], references: [id])
 }
